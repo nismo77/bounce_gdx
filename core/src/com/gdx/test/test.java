@@ -16,6 +16,7 @@ public class test extends ApplicationAdapter {
 	@Override
 	public void create() {
 		batch = new SpriteBatch();
+		img = new Texture("ball.png");
 		gameObject1 = new GameObject(img);
 
 	}
@@ -27,7 +28,7 @@ public class test extends ApplicationAdapter {
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
-		//batch.draw(gameObject1.getTexture(), gameObject1.x, gameObject1.y);
+		batch.draw(gameObject1.getTexture(), gameObject1.x, gameObject1.y);
 		batch.end();
 	}
 
@@ -45,15 +46,16 @@ public class test extends ApplicationAdapter {
 		
 		if(bounce_animate) {
 			if( gameObject1.y >= 400 ) {
+				System.out.println("Goes down");
 				if( gameObject1.y <= 50) {
 					bounce_animate = false;					
 				}
 				else {
-					gameObject1.y -= 0.3;
+					gameObject1.y -= 1.0;
 				}					
 			}
 			else {
-				gameObject1.y += 0.3;
+				gameObject1.y += 1.0;
 			}
 		}
 		
