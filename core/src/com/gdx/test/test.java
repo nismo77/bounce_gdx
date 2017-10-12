@@ -27,7 +27,7 @@ public class test extends ApplicationAdapter {
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
-		batch.draw(gameObject1.getTexture(), gameObject1.x, gameObject1.y);
+		//batch.draw(gameObject1.getTexture(), gameObject1.x, gameObject1.y);
 		batch.end();
 	}
 
