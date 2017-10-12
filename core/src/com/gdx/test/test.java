@@ -21,7 +21,7 @@ public class test extends ApplicationAdapter {
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
-		// some example comment
+		// some example commenjhjgt
 		batch.draw(img, 0, 0);
 		batch.end();
 	}
